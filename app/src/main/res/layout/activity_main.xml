@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <GridLayout
+            android:id="@+id/gridLayoutCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:columnCount="3"
+            android:rowCount="7" />
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewRoles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <GridLayout
+            android:id="@+id/gridLayoutRoles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:columnCount="3"
+            android:rowCount="7"
+            android:visibility="gone" />
+
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageViewShow"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@null"
+        android:src="@drawable/eye"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewNewGame"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@null"
+        android:src="@drawable/the_inscription_is_a_new_game"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/imageViewShow"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
